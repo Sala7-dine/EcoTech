@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecot-Tech | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="overflow-x: hidden">
+
+    <header class="header">
+        <nav class="navbar container">
+          <img src="images/2.svg" alt="Echo-Tech logo" />
+  
+          <div class="pages" id="mobile">
+            
+                <a class="items" href="#">Home</a>
+                <a class="items" href="#">About</a>
+                <a class="items" href="#">Services</a>
+                <a class="items" href="#">Contacts</a>
+
+          </div>
+         
+          <div>
+            <button class="btn">Contact Us</button>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars" style="font-size:18px"></i>
+          </a>
+        </nav>
+    </header>
+
+    <section class="Home">
+        <div class="parent">
+            <div class="content">
+                <div class="title">Introduce Your Product <br> Quickly & Effectively</div>
+                <p class="para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
+                    mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                <div class="buttons">
+                    <button class="btn purchase">Purchase Ui kit</button>
+                    <button class="btn">Learn more</button>
+                </div>
+            </div>
+            <div class="ilustraion">
+                <img src="/images/svg5.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="details">
+        <div class="details-parent">
+            <div class="details-content">
+                <div class="title">Introduce Your Product <br> Quickly & Effectively</div>
+                <p class="para">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus 
+                    mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+                <div class="elemnts">
+                    <div class="icons"></div>
+                    <div class="title-1"></div>
+                    <div class="para-1"></div>
+                </div>
+            </div>
+
+            <div class="ilustraion">
+                <img src="/" alt="">
+            </div>
+
+        </div>
+    </section>
+
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("mobile");
+          if (x.className === "pages") {
+            x.className += " responsive";
+          } else {
+            x.className = "pages";
+          }
+        }
+        </script>
+</body>
+</html>

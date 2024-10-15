@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root{
+    --blue-1-t : #091133 ;
+    --blue-dark-1-t : #082298;
+    --blue-2-c : #111b47;
+    --blue-2-p : #505F98;
+    --blue-dark-3 : #007AFF;
+    --blue-4-b : #505F98;
+    --grey-dark-1-t : #a6a6a6;
+    --grey-2 :#5D6970;
+    --grey-3-c : #979797;
+    --white : #fff;
+    --black : #000;
+    --gray-f : #E7ECFF;
+}
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+section {
+    display: block;
+  }
+  
+body {
+    font-family: "Playfair Display", serif; 
+    background-image: url(/images/svg-bg.svg);
+}
+
+a {
+    text-decoration: none;
+    color: var(--blue-1-t);
+}
+
+
+header , .Home{
+    padding: 8px 70px;
+}
+.items:hover{
+    color: var(--blue-dark-3);
+    transition: 0.20s;
+}
+
+.header .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .navbar img {
+    width: 56px;
+}
+.header .navbar .pages{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+.pages a{
+    display: block;
+    font-size: 9px;
+    padding: 5px;
+
+}
+
+.navbar .icon {  
+    display: none;
+    color: black;
+}
+
+.btn{
+    width: 60px;
+    font-size: 0.5rem;
+    font-weight: 600;
+    color: var(--blue-2-c);
+    padding: 4px 10px;
+    background-color: var(--gray-f);
+    border: 1px solid var(--blue-2-c);
+    border-radius: 0.3rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s;
+}
+
+.btn::after{
+    content: "";
+    position: absolute;
+    background-color:var(--gray-f);
+    border-radius: inherit;
+    transition: 0.25s;
+    z-index: -1;
+}
+
+.btn:hover{
+    background-color: var(--blue-2-c);
+    color: #f9fafb;
+}
+
+
+.Home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+.parent{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    width: 1140px;
+}
+
+.content {
+    display: grid;
+    grid-template-rows: repeat(3 ,auto);
+    justify-content: center;
+    align-items: center;
+}
+.content .title ,  .para  , .buttons{
+    padding:5px 0;
+}
+
+.content .title{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--blue-1-t);
+}
+
+.content .para{
+    font-size: 0.7rem;
+    color: var(--blue-2-p);
+    padding-bottom: 10px;
+}
+
+.purchase{
+    background-color: var(--blue-2-c);
+    color: var(--gray-f);
+}
+
+.ilustraion img{
+    margin-left: 46px;
+    width: 170px;
+}
+
+.details{
+    height: 100vh;
+    padding: 8px 70px;
+    width: 1140px;
+    background-color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.details-parent{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+}
+
+.details-content{
+    display: grid;
+    grid-template-rows: repeat(3 ,auto);
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+@media screen and (max-width: 400px) {
+    body{
+        padding: 8px 40px;
+    }
+    .pages a , .btn{
+        display: none;}
+
+    .navbar a.icon {
+        display: block;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+
+
+    .pages {
+        display: block;
+        flex-direction: column;
+    }
+    .responsive {position: relative;}
+    .pages.responsive .icon {
+      position: absolute;
+      right : 0;
+      top: 0;
+    }
+
+    .pages.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
