@@ -12,7 +12,7 @@
     --grey-3-c : #979797;
     --white : #fff;
     --black : #000;
-    --gray-f : #E7ECFF;
+    --gray-f : #eeeeee;
 }
 * {
     margin: 0;
@@ -70,12 +70,12 @@ header , .Home{
 }
 
 .btn{
-    width: 60px;
+    max-width: 60px;
     font-size: 0.5rem;
     font-weight: 600;
     color: var(--blue-2-c);
     padding: 4px 10px;
-    background-color: var(--gray-f);
+    background-color: var(--white);
     border: 1px solid var(--blue-2-c);
     border-radius: 0.3rem;
     cursor: pointer;
@@ -94,7 +94,7 @@ header , .Home{
 
 .btn:hover{
     background-color: var(--blue-2-c);
-    color: #f9fafb;
+    color: var(--white);
 }
 
 
@@ -132,6 +132,7 @@ header , .Home{
     font-size: 0.7rem;
     color: var(--blue-2-p);
     padding-bottom: 10px;
+    line-height: 12px;
 }
 
 .purchase{
@@ -147,7 +148,6 @@ header , .Home{
 .details{
     height: 100vh;
     padding: 8px 70px;
-    width: 1140px;
     background-color: var(--white);
     display: flex;
     justify-content: center;
@@ -156,7 +156,6 @@ header , .Home{
 }
 
 .details-parent{
-    width: 100%;
     display: grid;
     grid-template-columns: repeat(2 ,1fr);
 }
@@ -167,6 +166,180 @@ header , .Home{
     justify-content: center;
     align-items: center;
 }
+
+.details-content .title-1 ,  .para-1 {
+    padding:2px 0;
+}
+
+.details-content .title{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--blue-1-t);
+}
+
+.details-content .para{
+    font-size: 0.7rem;
+    color: var(--blue-2-p);
+    padding-bottom: 10px;
+    line-height: 12px;
+}
+
+
+.details-content .title-1{
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--blue-1-t);
+}
+
+.details-content .para-1{
+    font-size: 0.5rem;
+    color: var(--blue-2-p);
+    padding-bottom: 10px;
+    line-height: 8px;
+}
+
+.elements{
+    display: grid;
+    grid-template-columns: repeat(2 , auto);
+}
+
+.icons img{
+    width: 15px;
+}
+
+.ilustraion .d-icons{
+    width: 190px;    
+}
+
+.price{
+    height: 100vh;
+    padding: 8px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    background-image: url(/images/Rectangle.png);
+    background-size: cover;
+}
+
+.price-details{
+    text-align: center;
+    max-width: 250px;
+}
+
+.price-details .title{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--blue-1-t);
+}
+
+.price-details .para{
+    font-size: 0.6rem;
+    color: var(--blue-2-p);
+    padding-bottom: 10px;
+    line-height: 12px;
+}
+
+.price-details h3{
+    font-family:sans-serif;
+    font-size: 3.5rem;
+    font-weight: 200;
+    color: var(--blue-1-t);
+}
+
+.price-details h6{
+    font-family:sans-serif;
+    font-size: 0.9rem;
+    font-weight: 200;
+    padding:2px 0 10px 0;
+    color: var(--blue-1-t);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
