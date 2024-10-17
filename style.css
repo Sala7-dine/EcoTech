@@ -291,7 +291,7 @@ header , .Home , .About{
 
 .About {
     height: 100vh;
-    background-color: white;
+    background-color: var(--white);
     margin-top: 0px;
     margin-bottom: 80px;
 }
@@ -418,12 +418,174 @@ header , .Home , .About{
 
 .contact-form{
     background-color: var(--blue-2-c);
+    padding: 100px 100px 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-form .title{
+
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--white);
+
+}
+
+.contact-form .parag{
+    font-size: 0.6rem;
+    color: var(--gray-f);
+    line-height: 30px;  
+    text-align: center;
+}
+
+.div-contact{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    border-radius: 35px;
+    background-color: #d9d9d92e;
+    margin: 20px;
+}
+
+.contact-input{
+    outline: none;
+    border: none;
+    background-color: #d9d9d900;
+    width: 100%;
+    padding: 22px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 1;
 }
 
 
+::placeholder{
+    color: #ffffffa2;;
+}
+
+.contact-label{
+    margin-left: 40px;
+}
+
+.icon1{
+    color: #ffffffa2;
+}
+
+.contact-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 500px;
+    text-align: center;
+    color:#ffffffa2;;
+    font-size: 22px;
+    padding: 16px 22px;
+    background-color: #505F98;
+    border: 1px solid #082055;
+    border-radius: 35px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s;
+    margin-left: 15px;
+}
+
+.contact-btn::after{
+    content: "";
+    position: absolute;
+    background-color:#082055;
+    border-radius: inherit;
+    transition: 0.25s;
+    z-index: -1;
+}
+
+.contact-btn:hover::after{
+    translate: 0;
+}
+
+.contact-btn:hover{
+    background-color: #333eba74;
+}
 
 
+/*------------------------------------ Services Section ---------------------------------- */
 
+
+.services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    background-color: var(--white);
+    height: 240vh;
+}
+
+.services .title{
+    font-size: 1.7rem;
+    text-decoration: underline;
+    font-weight: 700;
+    color: var(--blue-1-t);
+
+}
+
+
+.grid-parent{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(15, 1fr);
+    gap: 15px;
+    width: 1500px;
+    height: 170vh;
+}
+
+.grid-child{
+    background-color: var(--blue-2-c);
+    border-radius: 15px;
+}
+
+.c1{
+    grid-column: 1/4;
+    grid-row: 1/4;
+}
+.c2{
+    grid-column: 4/7;
+    grid-row: 1/5;
+}
+.c3{    
+    grid-column: 1/4;
+    grid-row: 4/7;
+}
+
+.c4{
+    grid-column: 4/7;
+   grid-row: 5/7;
+}
+.c5{
+    grid-column: 1/7;
+    grid-row: 7/10;
+}
+.c6{
+    grid-column: 1/4;
+    grid-row: 10/13;
+}
+
+.c7{
+    grid-column: 4/7;
+    grid-row: 10/14;
+}
+
+.c8{
+    grid-column: 1/4;
+    grid-row: 13/16;
+}
+.c9{
+    grid-column: 4/7;
+    grid-row: 14/16;
+}
 
 
 /*------------------------------------ Footer Style ---------------------------------- */ 
@@ -477,7 +639,7 @@ hr{
 }
 
 .social-icons i:hover{
-    color: var(--blue-1-t);
+    color: var(--blue-dark-3);
 }
 
 
