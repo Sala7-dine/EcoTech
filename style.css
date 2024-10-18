@@ -75,6 +75,7 @@ body {
     background-image:url(/images/svg-bg.svg);background-repeat:no-repeat;background-size:contain;background-position-x:800px;background-position-y:-400px;
 }
 
+
 a {
     text-decoration: none;
     color: var(--blue-1-t);
