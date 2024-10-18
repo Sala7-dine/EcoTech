@@ -1,17 +1,49 @@
 :root{
     --blue-1-t : #114ba8 ;
-    --blue-dark-1-t : #004dc9;
     --blue-2-c : #164796;
     --blue-2-p : #5b7cb1;
     --blue-dark-3 : #007AFF;
-    --blue-4-b : #505F98;
-    --grey-dark-1-t : #a6a6a6;
-    --grey-2 :#5D6970;
+    --blue-contact : #d9d9d900;
+    --div-contact :#d9d9d92e;
+    --icon-contact : #ffffffa2;
+    --contact-btn : #082055; 
+    --bg-contact: #11164c88;
+
+    --border-services : rgba(0, 0, 0, 0.12);
+
     --grey-3-c : #979797;
     --white : #fff;
-    --black : #000;
     --gray-f : #eeeeee;
     --footer : #E7ECFF;
+    --display : block;
+
+
+    /* --blue-dark-1-t : #004dc9;*/
+    /* --blue-4-b : #505F98; */
+    /* --grey-dark-1-t : #a6a6a6; */
+    /* --grey-2 :#5D6970; */
+    /* --black : #000; */
+}
+
+[data-theme="dark"] {
+
+    --blue-1-t : #ffffff ;
+    --blue-2-c : #164796;
+    --blue-2-p : #ffffff;
+    --blue-dark-3 : #007AFF;
+    --blue-contact : #d9d9d900;
+    --div-contact :#d9d9d92e;
+    --icon-contact : #ffffffa2;
+    --contact-btn : #082055; 
+    --bg-contact: #11164c88;
+
+    --border-services : rgba(0, 0, 0, 0.12);
+
+    --grey-3-c : #979797;
+    --white : #061836;
+    --gray-f : #eeeeee;
+    --footer : #061836;
+
 }
 
 /*------------------------------------ Global Style ---------------------------------- */ 
@@ -26,8 +58,10 @@ section {
   }
   
 body {
+    position: relative;
     font-family: sans-serif;
-    ;
+    background-color: var(--white);
+    background-image:url(/images/svg-bg.svg);background-repeat:no-repeat;background-size:contain;background-position-x:800px;background-position-y:-400px;
 }
 
 a {
@@ -40,6 +74,13 @@ a {
 header , .Home , .About{
     padding: 40px 200px;
 }
+
+.btn-toggle{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
 
 .items:hover{
     color: var(--blue-dark-3);
@@ -296,6 +337,10 @@ header , .Home , .About{
     margin-bottom: 80px;
 }
 
+.about-head{
+    background-color: var(--white);
+}
+
 .about-details{
     background-color: var(--gray-f);
 }
@@ -446,14 +491,14 @@ header , .Home , .About{
     align-items: center;
     width: 500px;
     border-radius: 35px;
-    background-color: #d9d9d92e;
+    background-color: var(--div-contact);
     margin: 20px;
 }
 
 .contact-input{
     outline: none;
     border: none;
-    background-color: #d9d9d900;
+    background-color: var(--blue-contact);
     width: 100%;
     padding: 22px;
     color: white;
@@ -464,7 +509,7 @@ header , .Home , .About{
 
 
 ::placeholder{
-    color: #ffffffa2;;
+    color: var(--gray-f);
 }
 
 .contact-label{
@@ -472,7 +517,7 @@ header , .Home , .About{
 }
 
 .icon1{
-    color: #ffffffa2;
+    color: var(--icon-contact);
 }
 
 .contact-btn{
@@ -482,10 +527,10 @@ header , .Home , .About{
     gap: 10px;
     width: 500px;
     text-align: center;
-    color:#ffffffa2;;
+    color:var(--icon-contact);;
     font-size: 22px;
     padding: 16px 22px;
-    background-color: #161d6f9c;
+    background-color: var(--contact-btn);
     border: none;
     border-radius: 35px;
     cursor: pointer;
@@ -494,21 +539,12 @@ header , .Home , .About{
     margin-left: 15px;
 }
 
-.contact-btn::after{
-    content: "";
-    position: absolute;
-    background-color:#082055;
-    border-radius: inherit;
-    transition: 0.25s;
-    z-index: -1;
-}
-
 .contact-btn:hover::after{
     translate: 0;
 }
 
 .contact-btn:hover{
-    background-color: #7e83bd69;
+    background-color: var(--bg-contact);
 }
 
 
@@ -541,11 +577,11 @@ header , .Home , .About{
     width: 98%;
     height: 79%;
     padding: 1em 0.5em;
-    background: linear-gradient(#ffffff 50%, #2c7bfe 50%);
+    background: linear-gradient(var(--white) 50%, var(--blue-2-c) 50%);
     background-size: 100% 200%;
     background-position: 0 2.5%;
     border-radius: 5px;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 35px var(--border-services);
     cursor: pointer;
     transition: 0.5s;
   }
@@ -554,26 +590,26 @@ header , .Home , .About{
   .services-title {
     font-size: 20px;
     font-weight: 600;
-    color: #1f194c;
-    margin: 1em 0;
+    color: var(--blue-1-t);
+    margin: 1em 0; 
   }
 
 
   .services-para {
-    color: #575a7b;
+    color: var(--blue-2-p);
     font-size: 15px;
     line-height: 1.6;
     letter-spacing: 0.03em;
   }
 
   .icon-wrapper {
-    background-color: #2c7bfe;
+    background-color: var(--blue-2-c);
     position: relative;
     margin: auto;
     font-size: 30px;
     height: 2.5em;
     width: 2.5em;
-    color: #ffffff;
+    color: var(--white);
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -585,15 +621,15 @@ header , .Home , .About{
   }
   
   .services-card:hover .icon-wrapper {
-    background-color: #ffffff;
-    color: #2c7bfe;
+    background-color: var(--white);
+    color: var(--blue-2-c);
   }
   
   .services-card:hover h3 {
-    color: #ffffff;
+    color: var(--white);
   }
   .services-card:hover p {
-    color: #f0f0f0;
+    color: var(--gray-f);
   }
   
 
@@ -630,12 +666,6 @@ footer{
     color: var(--grey-3-c);
 }
 
-hr{
-    height:0.2px;
-    border-width:0;
-    background-color:gray
-}
-
 .down-footer div a{
     font-size:18px;
     color: var(--grey-3-c);
@@ -651,16 +681,6 @@ hr{
 .social-icons i:hover{
     color: var(--blue-dark-3);
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

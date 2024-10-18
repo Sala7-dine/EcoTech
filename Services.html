@@ -18,11 +18,15 @@
        rel="stylesheet"
      />
 </head>
-<body style="background-image:url(/images/svg-bg.svg);background-repeat:no-repeat;background-size:contain;background-position-x:800px;background-position-y:-400px; ">
+<body  id="simulateDarkMode" class="container" data-theme="light">
 
+    
+  <button style="border: none;background-color:transparent;" id="toggleDarkMode" type="button" class="btn-toggle" onclick="toggleDarkMode()">
+      <img src="images/dark_mode.svg" id="mode-btn" alt="Echo-Tech logo" style="width: 50px;color: red;" />
+    </button>
     <header class="header">
         <nav class="navbar container">
-          <img src="images/light-logo.svg" alt="Echo-Tech logo" />
+          <img src="images/light-logo.svg" alt="Echo-Tech logo" id="make-image"/>
   
           <div class="pages" id="mobile">
             
@@ -67,7 +71,7 @@
           <div class="services-column">
             <div class="services-card">
               <div class="icon-wrapper">
-                <i class="fas fa-hammer"></i>
+                <i class="fas fa-broom"></i>
               </div>
               <h3 class="services-title">Service Heading</h3>
               <p class="services-para">
@@ -79,33 +83,7 @@
           <div class="services-column">
             <div class="services-card">
               <div class="icon-wrapper">
-                <i class="fas fa-brush"></i>
-              </div>
-              <h3 class="services-title">Service Heading</h3>
-              <p class="services-para">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-                consequatur necessitatibus eaque.
-              </p>
-            </div>
-          </div>
-
-          <div class="services-column">
-            <div class="services-card">
-              <div class="icon-wrapper">
-                <i class="fas fa-wrench"></i>
-              </div>
-              <h3 class="services-title">Service Heading</h3>
-              <p class="services-para">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
-                consequatur necessitatibus eaque.
-              </p>
-            </div>
-          </div>
-
-          <div class="services-column">
-            <div class="services-card">
-              <div class="icon-wrapper">
-                <i class="fas fa-truck-pickup"></i>
+                <i class="fas fa-broom"></i>
               </div>
               <h3 class="services-title">Service Heading</h3>
               <p class="services-para">
@@ -131,7 +109,7 @@
           <div class="services-column">
             <div class="services-card">
               <div class="icon-wrapper">
-                <i class="fas fa-plug"></i>
+                <i class="fas fa-broom"></i>
               </div>
               <h3 class="services-title">Service Heading</h3>
               <p class="services-para">
@@ -157,7 +135,33 @@
           <div class="services-column">
             <div class="services-card">
               <div class="icon-wrapper">
-                <i class="fas fa-plug"></i>
+                <i class="fas fa-broom"></i>
+              </div>
+              <h3 class="services-title">Service Heading</h3>
+              <p class="services-para">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                consequatur necessitatibus eaque.
+              </p>
+            </div>
+          </div>
+
+          <div class="services-column">
+            <div class="services-card">
+              <div class="icon-wrapper">
+                <i class="fas fa-broom"></i>
+              </div>
+              <h3 class="services-title">Service Heading</h3>
+              <p class="services-para">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+                consequatur necessitatibus eaque.
+              </p>
+            </div>
+          </div>
+
+          <div class="services-column">
+            <div class="services-card">
+              <div class="icon-wrapper">
+                <i class="fas fa-broom"></i>
               </div>
               <h3 class="services-title">Service Heading</h3>
               <p class="services-para">
@@ -189,7 +193,7 @@
         <div class="parent-footer">
             <div class="up-footer">
                 <div class="elem1"><p>©2023 Yourcompany</p></div>
-                <div class="elem2">  <img src="images/light-logo.svg" alt="Echo-Tech logo" /> </div>
+                <div class="elem2">  <img src="images/light-logo.svg" alt="Echo-Tech logo" class="make-image1" /> </div>
                 <div class="elem3"> <button class="btn purchase">Purchase Now</button> </div>
             </div>
             <hr>
@@ -217,14 +221,60 @@
 
 
     <script>
-        function myFunction() {
-          var x = document.getElementById("mobile");
-          if (x.className === "pages") {
-            x.className += " responsive";
+
+      // function myFunction() {
+      //   var x = document.getElementById("mobile");
+      //   if (x.className === "pages") {
+      //     x.className += " responsive";
+      //   } else {
+      //     x.className = "pages";
+      //   }
+      // }
+
+      window.onload = function() {
+          const container = document.getElementById('simulateDarkMode');
+          const savedMode = localStorage.getItem("mode");
+
+          if (savedMode === 'dark') {
+              container.setAttribute('data-theme', 'dark');
+              document.getElementById('mode-btn').src="images/light_mode.svg";
+              document.body.style.backgroundImage = "none";
+              document.getElementById('make-image').src="images/dark-logo.svg";
+              document.getElementById('make-image1').src="images/dark-logo.svg";
           } else {
-            x.className = "pages";
+              container.setAttribute('data-theme', 'light');
+              document.getElementById('mode-btn').src="images/dark_mode.svg";
+              document.body.style.backgroundImage = "";
+              document.getElementById('make-image').src="images/light-logo.svg";
+              document.getElementById('make-image1').src="images/light-logo.svg";
           }
-        }
-        </script>
+      }
+
+      function toggleDarkMode() { 
+      const container = document.getElementById('simulateDarkMode');
+      const buttonDarkMode = document.getElementById('toggleDarkMode');
+      const dataTheme = container.getAttribute('data-theme');
+      const savedMode = localStorage.getItem("mode");
+      
+      if(savedMode === 'dark' ){
+          container.setAttribute('data-theme', 'light');
+          document.getElementById('mode-btn').src="images/dark_mode.svg";
+          localStorage.setItem("mode", "light");
+          document.body.style.backgroundImage = "";
+          document.getElementById('make-image').src="images/light-logo.svg";
+          document.getElementById('make-image1').src="images/light-logo.svg";
+      } else {
+          container.setAttribute('data-theme', 'dark');
+          document.getElementById('mode-btn').src="images/light_mode.svg";
+          localStorage.setItem("mode", "dark");
+          document.body.style.backgroundImage = "none";
+          document.getElementById('make-image').src="images/dark-logo.svg";
+          document.getElementById('make-image1').src="images/dark-logo.svg";
+       
+}
+}
+
+
+  </script>
 </body>
 </html>
