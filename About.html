@@ -30,7 +30,7 @@
           </div>
          
           <div>
-            <button class="btn">Get Started</button>
+            <a href="NotFound.html" class="btn">Purchase Now</a> 
           </div>
           <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars" style="font-size:18px"></i>
@@ -54,7 +54,7 @@
                      
                         <div class="element-about">
                             <div class="icons">
-                                <img src="images/Icon_write.svg" alt="">
+                                <img src="images/Icon_write.svg" class="darkIcon" alt="">
                             </div>
                             <div class="infos">
                                 <div class="title-1">Title Goes Here</div>
@@ -63,7 +63,7 @@
                         </div>
                         <div class="element-about">
                             <div class="icons">
-                                <img src="images/Icon_write.svg" alt="">
+                                <img src="images/Icon_write.svg" class="darkIcon" alt="">
                             </div>
                             <div class="infos">
                                 <div class="title-1">Title Goes Here</div>
@@ -72,7 +72,7 @@
                         </div>
                         <div class="element-about">
                             <div class="icons">
-                                <img src="images/Icon_write.svg" alt="">
+                                <img src="images/Icon_write.svg" class="darkIcon" alt="">
                             </div>
                             <div class="infos">
                                 <div class="title-1">Title Goes Here</div>
@@ -81,7 +81,7 @@
                         </div>
                         <div class="element-about">
                             <div class="icons">
-                                <img src="images/Icon_write.svg" alt="">
+                                <img src="images/Icon_write.svg" class="darkIcon" alt="">
                             </div>
                             <div class="infos">
                                 <div class="title-1">Title Goes Here</div>
@@ -98,7 +98,7 @@
         </div>
     </section>
     
-    <section class="details about-details" style="margin-top:-100px ;">
+    <section class="details about-details">
         <div class="details-parent">
            
             <div class="details-content">
@@ -126,7 +126,7 @@
                 <div class="elements">
                     <div class="element">
                         <div class="icons">
-                            <img src="images/Icon_write.svg" alt="">
+                            <img src="images/Icon_write.svg" class="darkIcon" alt="">
                         </div>
                         <div class="title-1">Title Goes Here</div>
                         <div class="para-1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </div>
@@ -134,21 +134,21 @@
 
                     <div class="element">
                         <div class="icons">
-                            <img src="images/Icon_write.svg" alt="">
+                            <img src="images/Icon_write.svg" class="darkIcon" alt="">
                         </div>
                         <div class="title-1">Title Goes Here</div>
                         <div class="para-1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </div>
                     </div>
                     <div class="element">
                         <div class="icons">
-                            <img src="images/Icon_write.svg" alt="">
+                            <img src="images/Icon_write.svg" class="darkIcon" alt="">
                         </div>
                         <div class="title-1">Title Goes Here</div>
                         <div class="para-1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </div>
                     </div>
                     <div class="element">
                         <div class="icons">
-                            <img src="images/Icon_write.svg" alt="">
+                            <img src="images/Icon_write.svg" class="darkIcon" alt="">
                         </div>
                         <div class="title-1">Title Goes Here</div>
                         <div class="para-1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </div>
@@ -160,7 +160,7 @@
         
     </section>
 
-    <section class="details" style="margin-top:-100px;">
+    <section class="details">
         <div class="details-parent">
 
             <div class="ilustraion">
@@ -173,7 +173,7 @@
                     mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
               
                 <div>
-                    <button class="btn">Purchase Now</button>
+                    <a href="NotFound.html" class="btn purchase">Purchase Now</a> 
                 </div>
             </div>            
         </div>
@@ -183,8 +183,8 @@
         <div class="parent-footer">
             <div class="up-footer">
                 <div class="elem1"><p>©2023 Yourcompany</p></div>
-                <div class="elem2">  <img src="images/light-logo.svg" alt="Echo-Tech logo" class="make-image1"/> </div>
-                <div class="elem3"> <button class="btn purchase">Purchase Now</button> </div>
+                <div class="elem2">  <img src="images/light-logo.svg" alt="Echo-Tech logo" id="make-image1"/> </div>
+                <div class="elem3"> <a href="NotFound.html" class="btn purchase">Purchase Now</a>  </div>
             </div>
             <hr>
             <div class="down-footer"> 
@@ -229,12 +229,22 @@
                 document.body.style.backgroundImage = "none";
                 document.getElementById('make-image').src="images/dark-logo.svg";
                 document.getElementById('make-image1').src="images/dark-logo.svg";
+
+                const collection = document.getElementsByClassName("darkIcon");
+                    for (let i = 0; i < collection.length; i++) {
+                    collection[i].src = "images/icon-write-white.svg";
+                }
             } else {
                 container.setAttribute('data-theme', 'light');
                 document.getElementById('mode-btn').src="images/dark_mode.svg";
                 document.body.style.backgroundImage = "";
                 document.getElementById('make-image').src="images/light-logo.svg";
                 document.getElementById('make-image1').src="images/light-logo.svg";
+
+                const collection = document.getElementsByClassName("darkIcon");
+                    for (let i = 0; i < collection.length; i++) {
+                    collection[i].src = "images/Icon_write.svg";
+                }
             }
         }
 
@@ -251,6 +261,14 @@
             document.body.style.backgroundImage = "";
             document.getElementById('make-image').src="images/light-logo.svg";
             document.getElementById('make-image1').src="images/light-logo.svg";
+
+
+            
+            const collection = document.getElementsByClassName("darkIcon");
+                    for (let i = 0; i < collection.length; i++) {
+                    collection[i].src = "images/Icon_write.svg";
+                }
+
         } else {
             container.setAttribute('data-theme', 'dark');
             document.getElementById('mode-btn').src="images/light_mode.svg";
@@ -258,6 +276,11 @@
             document.body.style.backgroundImage = "none";
             document.getElementById('make-image').src="images/dark-logo.svg";
             document.getElementById('make-image1').src="images/dark-logo.svg";
+
+            const collection = document.getElementsByClassName("darkIcon");
+                    for (let i = 0; i < collection.length; i++) {
+                    collection[i].src = "images/icon-write-white.svg";
+            }
          
   }
 }
