@@ -84,7 +84,7 @@ a {
 /*------------------------------------ Header Style ---------------------------------- */ 
 
 header , .Home , .About{
-    padding: 40px 200px;
+    padding: 40px 125px;
 }
 
 .btn-toggle{
@@ -166,7 +166,6 @@ header , .Home , .About{
 .parent{
     display: grid;
     grid-template-columns: repeat(2 ,1fr);
-    width: 1245px;
 }
 
 .content {  
@@ -197,7 +196,7 @@ header , .Home , .About{
 }
 
 .ilustraion img{
-    width: 600px;
+    width: 500px;
 }
 
 
@@ -233,7 +232,7 @@ header , .Home , .About{
 }
 
 .details-content .title{
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: var(--blue-1-t);
 }
@@ -276,7 +275,7 @@ header , .Home , .About{
 
 
 .details-parent .ilustraion img{
-    width: 650px;
+    width: 500px;
 }
 
 .ilustraion .d-icons{
@@ -288,7 +287,7 @@ header , .Home , .About{
 
 .price{
     height: 100vh;
-    padding: 8px 70px;
+    padding: 110px 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -308,7 +307,7 @@ header , .Home , .About{
 }
 
 .price-details .title{
-    font-size: 2rem;
+    font-size: 1.7rem;
     font-weight: 700;
     color: var(--blue-1-t);
 }
@@ -359,7 +358,7 @@ header , .Home , .About{
 
 .About .parent{
     width: 1400px;
-    gap: 86px;
+    gap: 45px;
 }
 .about-content {
     display: grid;
@@ -373,7 +372,7 @@ header , .Home , .About{
 }
 
 .about-content .title{
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: var(--blue-1-t);
 }
@@ -423,15 +422,17 @@ header , .Home , .About{
     line-height: 22px;
 }
 
+.About .parent .ilustraion img{
+    width: 500px;
+}
+
 /*------------------------------------ Featurs Style ---------------------------------- */ 
 
 
 .about-featurs{
 
- 
     width: 1245px;
     height: 100vh;
-    
 }
 
 .featurs{
@@ -644,7 +645,10 @@ header , .Home , .About{
 .services-card:hover p {
     color: var(--gray-f-s);
 }
-  
+
+.services-ilustraion img{
+    width: 550px;
+}
 
 
 /*------------------------------------ Footer Style ---------------------------------- */ 
