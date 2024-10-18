@@ -8,7 +8,7 @@
     --icon-contact : #ffffffa2;
     --contact-btn : #082055; 
     --bg-contact: #11164c88;
-
+    --about-d : #eeeeee ;
     --border-services : rgba(0, 0, 0, 0.12);
 
     --grey-3-c : #979797;
@@ -36,6 +36,8 @@
     --icon-contact : #ffffffa2;
     --contact-btn : #082055; 
     --bg-contact: #11164c88;
+
+    --about-d : #061836;
 
     --border-services : rgba(0, 0, 0, 0.12);
 
@@ -342,7 +344,7 @@ header , .Home , .About{
 }
 
 .about-details{
-    background-color: var(--gray-f);
+    background-color: var(--about-d);
 }
 
 .About .parent{
