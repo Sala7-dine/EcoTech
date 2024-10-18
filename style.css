@@ -596,25 +596,7 @@ header , .Home , .About{
     color: #f0f0f0;
   }
   
-  @media screen and (min-width: 768px) {
-    .services-section {
-      padding: 0 2em;
-    }
-    .services-column {
-      flex: 0 50%;
-      max-width: 50%;
-    }
-  }
-  
-  @media screen and (min-width: 992px) {
-    .services-section {
-      padding: 0em 0em;
-    }
-    .services-column {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-    }
-} 
+
 
 /*------------------------------------ Footer Style ---------------------------------- */ 
 
@@ -670,6 +652,46 @@ hr{
     color: var(--blue-dark-3);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------- Responsive -------------------------------------------*/
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    .services-section {
+      padding: 0 2em;
+    }
+    .services-column {
+      flex: 0 50%;
+      max-width: 50%;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .services-section {
+      padding: 0em 0em;
+    }
+    .services-column {
+      flex: 0 0 33.33%;
+      max-width: 33.33%;
+    }
+} 
 
 
 
