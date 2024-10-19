@@ -5,11 +5,16 @@
     --blue-2-btn : #164796;
     --blue-2-p : #5b7cb1;
     --blue-dark-3 : #007AFF;
+
     --blue-contact : #d9d9d900;
     --div-contact :#d9d9d92e;
     --icon-contact : #ffffffa2;
     --contact-btn : #082055; 
     --bg-contact: #11164c88;
+
+    --blue-dark-3-t : #003772;
+    --bg-contact-t: #000644;
+
     --about-d : #eeeeee ;
     --border-services : rgba(0, 0, 0, 0.12);
 
@@ -20,6 +25,11 @@
     --gray-f-s : #eeeeee;
     --footer : #E7ECFF;
     --display : block;
+
+
+    --title-size-17 : 3vw;
+    --para-size-06 : 1vw;
+
 
 
     /* --blue-dark-1-t : #004dc9;*/
@@ -87,6 +97,100 @@ header , .Home , .About{
     padding: 40px 125px;
 }
 
+.responsive-nav{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+}
+
+ 
+  .wrapper-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(-135deg, var(--bg-contact-t), var(--blue-dark-3-t));
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+    /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+    clip-path: circle(25px at calc(100% - 45px) 45px);
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .wrapper-nav{
+    clip-path: circle(75%);
+  }
+  .menu-btn{
+    position: absolute;
+    z-index: 2;
+    right: 20px;
+    /* left: 20px; */
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(-135deg,var(--bg-contact-t), var(--blue-dark-3-t));
+    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+    transition: all 0.3s ease-in-out;
+  }
+  #active:checked ~ .menu-btn{
+    background: #fff;
+    color: #4158d0;
+  }
+
+
+  .wrapper-nav ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align: center;
+  }
+  .wrapper-nav ul li{
+    margin: 15px 0;
+  }
+  .wrapper-nav ul li a{
+    color: none;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    padding: 5px 30px;
+    color: #fff;
+    position: relative;
+    line-height: 50px;
+    transition: all 0.3s ease;
+  }
+  .wrapper-nav ul li a:after{
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 100%;
+    height: 50px;
+    left: 0;
+    border-radius: 50px;
+    transform: scaleY(0);
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+  .wrapper-nav ul li a:hover:after{
+    transform: scaleY(1);
+  }
+  .wrapper-nav ul li a:hover{
+    color: #4158d0;
+  }
+  input[type="checkbox"]{
+    display: none;
+}
+
+
+
 .btn-toggle{
     position: fixed;
     bottom: 15px;
@@ -128,7 +232,7 @@ header , .Home , .About{
 
 .btn{
     max-width: 200px;
-    font-size: 0.6rem;
+    font-size: var(--para-size-06);
     color: var(--blue-2-btn);
     padding: 10px 30px;
     background-color: var(--white);
@@ -176,14 +280,14 @@ header , .Home , .About{
 }
 
 .content .title{
-    font-size: 1.7rem;
+    font-size: var(--title-size-17);
     font-weight: 700;
     color: var(--blue-1-t);
     align-self: flex-end;   
 }
 
 .content .para{
-    font-size: 0.6rem;
+    font-size: var(--para-size-06);
     color: var(--blue-2-p);
     line-height: 30px;
 }
@@ -192,7 +296,6 @@ header , .Home , .About{
 .purchase{
     background-color: var(--blue-2-c);
     color: var(--gray-f);
-    border: none;
 }
 
 .ilustraion img{
@@ -232,14 +335,14 @@ header , .Home , .About{
 }
 
 .details-content .title{
-    font-size: 1.6rem;
+    font-size: var(--title-size-17);
     font-weight: 700;
     color: var(--blue-1-t);
 }
 
 .details-content .para{
 
-    font-size: 0.6rem;
+    font-size: var(--para-size-06);
     color: var(--blue-2-p);
     padding-bottom: 10px;
     line-height: 30px;
@@ -286,7 +389,7 @@ header , .Home , .About{
 /* -------------------------------- Price section ---------------------------------------------- */
 
 .price{
-    height: 100vh;
+    height: 98vh;
     padding: 110px 70px;
     display: flex;
     flex-direction: column;
@@ -307,14 +410,14 @@ header , .Home , .About{
 }
 
 .price-details .title{
-    font-size: 1.7rem;
+    font-size: var(--title-size-17);
     font-weight: 700;
     color: var(--blue-1-t);
 }
 
 .price-details .para{
     
-    font-size: 0.6rem;
+    font-size: var(--para-size-06);
     color: var(--blue-2-p);
     line-height: 30px;
     
@@ -372,13 +475,13 @@ header , .Home , .About{
 }
 
 .about-content .title{
-    font-size: 1.6rem;
+    font-size: var(--title-size-17);
     font-weight: 700;
     color: var(--blue-1-t);
 }
 
 .about-content .para{
-    font-size: 0.6rem;
+    font-size: var(--para-size-06);
     color: var(--blue-2-p);
     padding-bottom: 20px;
     line-height: 30px;
@@ -489,7 +592,7 @@ header , .Home , .About{
 }
 
 .contact-form .parag{
-    font-size: 0.6rem;
+    font-size: var(--para-size-06);
     color: var(--gray-f);
     line-height: 30px;  
     text-align: center;
@@ -704,13 +807,214 @@ footer{
 
 
 /*--------------------------------------------- Responsive -------------------------------------------*/
+/* --------------------- Tabllet -------------------- */
+
+@media screen and (max-width:992px){
+
+    .Home{
+        padding: 5px 70px;
+        height: 77vh;
+    }
+    .header .navbar{
+        display: none;
+    }
+
+    .responsive-nav{
+        display: block;
+        z-index: 1111111;
+    }
+
+    .Home .parent .ilustraion{
+        display: none;
+    }
+
+    .details-parent .ilustraion img{
+        width: 300px;
+    }
+
+    .d2{
+        display: none;
+    }
+
+    .parent{
+        z-index: -1;
+        display: grid;
+        grid-template-columns: auto;
+        height: 40vh;
+
+    }
+
+    .About .parent{
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .content .title , .details-content .title , .price-content .title{
+        font-size: 0.9rem;
+    }
+    .content .para , .details-content .para , .price-content .para{
+        font-size: 0.4rem;
+        line-height: 20px;
+    }
+
+    .btn{
+        max-width: 90px;
+        padding: 7px 17px;
+        font-size: 12px;
+    }
+    .price{
+        background-image: none;
+    }
+    .details{
+        height: 80vh;
+        margin: 0;
+    }
+
+    .details-parent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .details-content{
+        width: 700px;
+    }
+
+    .elements{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        align-self: flex-start;
+    }
+
+    .elem1 p {
+        font-size: 12px;
+        color: var(--grey-3-c);
+    }
 
 
 
+    footer {
+        padding: 0px 27px;
+    }
+
+    .parent-footer{
+        width: 100%;
+    }
+
+    .up-footer img {
+        width: 77px;
+    }
+
+    .down-footer div a {
+        font-size: 10px;
+        color: var(--grey-3-c);
+        padding: 0 5px;
+    }
+    
+
+}
+
+/* --------------------- Mobile -------------------- */
+
+@media screen and (max-width:768px){
+
+    .Home{
+        padding: 5px 70px;
+        height: 77vh;
+    }
+    .header .navbar{
+        display: none;
+    }
+
+    .responsive-nav{
+        display: block;
+        z-index: 1111111;
+    }
+
+    .parent .ilustraion , .details-parent .ilustraion img{
+        display: none;
+    }
+
+    .parent{
+        z-index: -1;
+        display: grid;
+        grid-template-columns: auto;
+        height: 40vh;
+
+    }
+
+    .About .parent{
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    .content .title , .details-content .title , .price-content .title{
+        font-size: 0.9rem;
+    }
+    .content .para , .details-content .para , .price-content .para{
+        font-size: 0.4rem;
+        line-height: 20px;
+    }
+
+    .btn{
+        max-width: 90px;
+        padding: 7px 17px;
+        font-size: 12px;
+    }
+    .price{
+        background-image: none;
+    }
+    .details{
+        height: 70vh;
+        margin: 0;
+    }
+
+    .details-parent{
+        gap: 0;
+    }
+
+    .details-content{
+        width: 419px;
+    }
+
+    .elements{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+        align-self: flex-start;
+    }
+
+    .elem1 p {
+        font-size: 12px;
+        color: var(--grey-3-c);
+    }
 
 
 
-@media screen and (min-width: 768px) {
+    footer {
+        padding: 0px 27px;
+    }
+
+    .parent-footer{
+        width: 100%;
+    }
+
+    .up-footer img {
+        width: 77px;
+    }
+
+    .down-footer div a {
+        font-size: 10px;
+        color: var(--grey-3-c);
+        padding: 0 5px;
+    }
+    
+
+}
+
+
+@media screen and (min-width: 769px) {
+
+
     .services-section {
       padding: 0 2em;
     }
@@ -729,61 +1033,3 @@ footer{
       max-width: 33.33%;
     }
 } 
-
-
-
-
-@media screen and (max-width: 600px) {
-
-    .content .title{
-        font-size: 1.2rem;
-    }
-    .content .para{
-        font-size: 0.4rem;
-    }
-
-}
-
-@media screen and (max-width: 400px) {
-
-    .content .title{
-        font-size: 0.8rem;
-    }
-    .content .para{
-        font-size: 0.2rem;
-    }
-
-    header , .Home{
-        padding: 8px 40px;
-    }
-    .pages a , .btn{
-        display: none;}
-
-    .navbar a.icon {
-        display: block;
-    }
-
-
-
-  }
-  
-  @media screen and (max-width: 400px) {
-
-
-    .pages {
-        display: block;
-        flex-direction: column;
-    }
-    .responsive {position: relative;}
-    .pages.responsive .icon {
-      position: absolute;
-      right : 0;
-      top: 0;
-    }
-
-    .pages.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-  }

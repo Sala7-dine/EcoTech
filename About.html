@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
 </head>
 <body style="background-image: none;"
 
@@ -36,6 +37,19 @@
             <i class="fa fa-bars" style="font-size:18px"></i>
           </a>
         </nav>
+        
+        <div class="responsive-nav">
+            <input type="checkbox" id="active">
+            <label for="active" class="menu-btn"><i class="fas fa-bars" style="font-size:20px;"></i></label>
+            <div class="wrapper-nav">
+               <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="About.html">About</a></li>
+                  <li><a href="Services.html">Services</a></li>
+                  <li><a href="Contact.html">Contacts</a></li>
+               </ul>
+            </div>
+        </div>
     </header>
 
     <section class="About">
@@ -225,15 +239,6 @@
 
 
     <script>
-
-        // function myFunction() {
-        //   var x = document.getElementById("mobile");
-        //   if (x.className === "pages") {
-        //     x.className += " responsive";
-        //   } else {
-        //     x.className = "pages";
-        //   }
-        // }
 
         window.onload = function() {
             const container = document.getElementById('simulateDarkMode');
